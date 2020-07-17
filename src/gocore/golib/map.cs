@@ -51,7 +51,7 @@ namespace go
         private Dictionary<TKey, TValue> Map
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
-            get => m_map ??= new Dictionary<TKey, TValue>();
+            get => m_map ??= new();
         }
 
         public int Count

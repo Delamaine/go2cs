@@ -111,7 +111,7 @@ namespace go
                 return;
 
             if (Defers is null)
-                Defers = new Stack<Action>();
+                Defers = new();
 
             Defers.Push(deferredAction);
         }

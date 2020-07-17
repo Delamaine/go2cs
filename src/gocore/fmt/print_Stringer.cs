@@ -167,7 +167,7 @@ namespace go
 
     public static class StringerExtensions
     {
-        private static readonly ConcurrentDictionary<Type, MethodInfo> s_conversionOperators = new ConcurrentDictionary<Type, MethodInfo>();
+        private static readonly ConcurrentDictionary<Type, MethodInfo> s_conversionOperators = new();
 
         [MethodImpl(MethodImplOptions.AggressiveInlining), DebuggerNonUserCode]
         public static T _<T>(this Stringer target)

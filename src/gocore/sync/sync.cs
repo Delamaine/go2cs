@@ -28,7 +28,7 @@ namespace go
     {
         public struct Mutex {
             private object _lock;
-            public object Lock => _lock ??= new object();
+            public object Lock => _lock ??= new();
         }
 
         public static void Lock(this ref Mutex mutex) => Monitor.Enter(mutex.Lock);

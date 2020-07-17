@@ -42,7 +42,7 @@ namespace go
 
     public static class SwitchExpressionExtensions
     {
-        private static readonly ConcurrentDictionary<Type, MethodInfo> s_interfaceTypeAsserts = new ConcurrentDictionary<Type, MethodInfo>();
+        private static readonly ConcurrentDictionary<Type, MethodInfo> s_interfaceTypeAsserts = new();
 
         private static bool IsTypeMatch<T>(SwitchExpression<T> target, Type type)
         {

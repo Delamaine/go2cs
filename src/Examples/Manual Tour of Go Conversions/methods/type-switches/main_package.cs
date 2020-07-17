@@ -22,26 +22,23 @@ func main() {
 */
 #region source
 using go;
+using fmt = go.fmt_package;
 using static go.builtin;
 
 static class main_package
 {
     static void @do(object i) {
+        switch (i.type())
         {
-            object v = i.type(); // "v" is scoped to switch
-
-            switch (v)
-            {
-                case int v_i:
-                    println($"Twice {v_i} is {v_i * 2}");
-                    break;
-                case @string v_s:
-                    println($"\"{v_s}\" is {len(v_s)} bytes long");
-                    break;
-                default:
-                    println($"I don't know about type {GetGoTypeName(v.GetType())}!");
-                    break;
-            }
+            case int v:
+                fmt.Printf($"Twice {0} is {1}\n", v, v*2);
+                break;
+            case @string v:
+                fmt.Printf($"\"{0}\" is {1} bytes long\n", v, len(v));
+                break;
+            case object v: // Since everobjec
+                fmt.Printf($"I don't know about type {0}!\n", GetGoTypeName(v.GetType()));
+                break;
         }
     }
 

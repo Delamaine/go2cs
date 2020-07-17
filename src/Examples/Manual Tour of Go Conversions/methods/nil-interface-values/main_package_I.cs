@@ -132,7 +132,7 @@ public static partial class main_package
 
 public static class main_IExtensions
 {
-    private static readonly ConcurrentDictionary<Type, MethodInfo> s_conversionOperators = new ConcurrentDictionary<Type, MethodInfo>();
+    private static readonly ConcurrentDictionary<Type, MethodInfo> s_conversionOperators = new();
 
     [GeneratedCode("go2cs", "0.1.1.0"), MethodImpl(MethodImplOptions.AggressiveInlining), DebuggerNonUserCode]
     public static ref T TypeAssert<T>(this main_package.I target)

@@ -109,7 +109,7 @@ namespace go
 
         static TypeExtensions()
         {
-            s_extensionMethods = new List<(MethodInfo, Type)>();
+            s_extensionMethods = new();
 
             AppDomain currentDomain = AppDomain.CurrentDomain;
             currentDomain.AssemblyLoad += (_, e) => LoadAssemblyExtensionMethods(e.LoadedAssembly);

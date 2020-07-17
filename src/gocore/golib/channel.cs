@@ -109,7 +109,7 @@ namespace go
             m_canAddEvent = new ManualResetEventSlim(false);
             m_canTakeEvent = new ManualResetEventSlim(false);
             m_queue = new ConcurrentQueue<T>();
-            m_enumeratorTokenSource = new CancellationTokenSource();
+            m_enumeratorTokenSource = new();
             m_isClosed = new ptr<bool>(false);
 
             Capacity = size;

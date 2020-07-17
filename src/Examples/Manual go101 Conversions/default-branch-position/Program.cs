@@ -104,7 +104,7 @@ namespace go.math
 {
     static class rand_package
     {
-        private static readonly System.Random s_random = new System.Random();
+        private static readonly System.Random s_random = new();
 
         public static int Intn(int range) =>
             s_random.Next(0, range);
