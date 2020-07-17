@@ -157,7 +157,7 @@ namespace go
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Default<T>(this SwitchExpression<T> target, Action action)
         {
-            if (!(target is null))
+            if (target is not null)
                 action();
         }
     }

@@ -194,7 +194,7 @@ namespace go
             if (!interfaceType.IsInterface)
                 return false;
 
-            while (!(targetType is null))
+            while (targetType is not null)
             {
                 if (targetType.GetInterfaces().Any(targetInterface => targetInterface == interfaceType || targetInterface.ImplementsInterface(interfaceType)))
                     return true;
@@ -268,7 +268,7 @@ namespace go
                     {
                         method = attribute.PromotedType.GetExtensionMethodSearchingPromotions(methodName);
 
-                        if (!(method is null))
+                        if (method is not null)
                             break;
                     }
                 }

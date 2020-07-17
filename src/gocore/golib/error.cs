@@ -67,7 +67,7 @@ namespace go
         {
             get
             {
-                if (m_target_is_ptr && !(m_target_ptr is null))
+                if (m_target_is_ptr && m_target_ptr is not null)
                     return ref m_target_ptr.Value;
 
                 return ref m_target;
@@ -93,7 +93,7 @@ namespace go
         {
             T target = m_target;
 
-            if (m_target_is_ptr && !(m_target_ptr is null))
+            if (m_target_is_ptr && m_target_ptr is not null)
                 target = m_target_ptr.Value;
 
             if (s_ErrorByRef is null)
@@ -131,14 +131,14 @@ namespace go
 
             MethodInfo extensionMethod = targetTypeByRef.GetExtensionMethod("Error");
 
-            if (!(extensionMethod is null))
+            if (extensionMethod is not null)
                 s_ErrorByRef = extensionMethod.CreateStaticDelegate(typeof(ErrorByRef)) as ErrorByRef;
 
             if (s_ErrorByRef is null)
             {
                 extensionMethod = targetType.GetExtensionMethod("Error");
 
-                if (!(extensionMethod is null))
+                if (extensionMethod is not null)
                     s_ErrorByVal = extensionMethod.CreateStaticDelegate(typeof(ErrorByVal)) as ErrorByVal;
             }
 

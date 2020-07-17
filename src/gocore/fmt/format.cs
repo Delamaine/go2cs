@@ -35,12 +35,12 @@ namespace go
         {
             Stringer? stringer = arg as Stringer ?? Stringer.As(arg);
 
-            if (!(stringer is null))
+            if (stringer is not null)
                 return stringer.String();
 
             error? err = arg as error ?? error.As(arg);
 
-            if (!(err is null))
+            if (err is not null)
                 return err.Error();
 
             if (arg is @string)
