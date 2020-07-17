@@ -26,13 +26,15 @@ using System.Runtime.CompilerServices;
 
 namespace go
 {
+    // TODO: Not sure that this type is needed except in possible cases where the size of a bool comes into play for serialization scenarios
+
     /// <summary>
     /// Represents a boolean type for the set of binary truth values denoted by the predeclared constants <c>true</c> and <c>false</c>. 
     /// </summary>
     /// <remarks>
     /// The C# <see cref="bool"/> type is not blittable and cannot be used with unmanaged operations.
     /// This Go equivalent bool structure is based on <see cref="byte"/> which is blittable.
-    /// </remarks>
+   /// </remarks>
     public readonly struct @bool : IConvertible
     {
         // Value of the @bool struct

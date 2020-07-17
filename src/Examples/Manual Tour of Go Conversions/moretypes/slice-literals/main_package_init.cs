@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using go;
 
 static partial class main_package
 {
@@ -8,16 +7,16 @@ static partial class main_package
     public struct __inline_struct_0
     {
         public int i;
-        public @bool b;
+        public bool b;
 
-        public __inline_struct_0((int, @bool) inputs)
+        public __inline_struct_0((int, bool) inputs)
         {
             (int __i, bool __b) = inputs;
             i = __i;
             b = __b;
         }
 
-        public __inline_struct_0(int __i = default, @bool __b = default)
+        public __inline_struct_0(int __i = default, bool __b = default)
         {
             i = __i;
             b = __b;
