@@ -23,6 +23,7 @@
     <Nullable>enable</Nullable>
     <NoWarn>660;661;1701;1702;IDE1006</NoWarn>
     <Version>0.1.0</Version>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
